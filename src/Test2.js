@@ -12,6 +12,28 @@ function Test2() {
       '(min-width: 800px)': function () {
         // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
         // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
+        var targets = document.querySelectorAll('.container2-hero div');
+
+        targets.forEach((target) => {
+          const tl = gsap
+            .timeline({
+              defaults: { duration: 1 },
+              scrollTrigger: {
+                trigger: target,
+                markers: false,
+                scrub: true,
+                start: 'top 120px',
+                end: '+=200%',
+                pin: true,
+              },
+            })
+            .from(target, {
+              // scale: 0.3,
+              rotation: 0,
+              autoAlpha: 1,
+              ease: 'power2',
+            });
+        });
       },
       // mobile
       '(max-width: 799px)': function () {
@@ -35,6 +57,28 @@ function Test2() {
         //     .from(target, { opacity: 0, duration: 0.2 }, 0)
         //     .to(target, { opacity: 0, duration: 0.2 }, 0.8);
         // });
+        var targets = document.querySelectorAll('.container2-hero div');
+
+        targets.forEach((target) => {
+          const tl = gsap
+            .timeline({
+              defaults: { duration: 1 },
+              scrollTrigger: {
+                trigger: target,
+                markers: false,
+                scrub: true,
+                start: 'top 120px',
+                end: '+=290%',
+                pin: true,
+              },
+            })
+            .from(target, {
+              // scale: 0.3,
+              rotation: 0,
+              autoAlpha: 1,
+              ease: 'power2',
+            });
+        });
       },
 
       // all
@@ -81,29 +125,6 @@ function Test2() {
         }
 
         // Timeline for fading in and fading out the text
-
-        var targets = document.querySelectorAll('.container2-hero div');
-
-        targets.forEach((target) => {
-          const tl = gsap
-            .timeline({
-              defaults: { duration: 1 },
-              scrollTrigger: {
-                trigger: target,
-                markers: false,
-                scrub: true,
-                start: 'top 120px',
-                end: '+=360%',
-                pin: true,
-              },
-            })
-            .from(target, {
-              // scale: 0.3,
-              rotation: 0,
-              autoAlpha: 0,
-              ease: 'power2',
-            });
-        });
       },
     });
   }, []);
