@@ -19,7 +19,7 @@ function Test() {
         // reverted/killed when the media query doesn't match anymore.
         // var targets = document.querySelectorAll('.container-hero div');
         // targets.forEach((target) => {
-        //   const tl = gsap
+        //   gsap
         //     .timeline({
         //       defaults: { duration: 1 },
         //       scrollTrigger: {
@@ -83,7 +83,7 @@ function Test() {
         var targets = document.querySelectorAll('.container-hero div');
 
         targets.forEach((target) => {
-          const tl = gsap
+          gsap
             .timeline({
               defaults: { duration: 1 },
               scrollTrigger: {

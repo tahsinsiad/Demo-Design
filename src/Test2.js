@@ -15,7 +15,7 @@ function Test2() {
         var targets = document.querySelectorAll('.container2-hero div');
 
         targets.forEach((target) => {
-          const tl = gsap
+          gsap
             .timeline({
               defaults: { duration: 1 },
               scrollTrigger: {
@@ -60,7 +60,7 @@ function Test2() {
         var targets = document.querySelectorAll('.container2-hero div');
 
         targets.forEach((target) => {
-          const tl = gsap
+          gsap
             .timeline({
               defaults: { duration: 1 },
               scrollTrigger: {
